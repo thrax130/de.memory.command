@@ -1,1 +1,12 @@
-Bundle-Version: 0.0.0.${tstamp}
+-buildpath:  \
+	biz.aQute.bnd.annotation,\
+	osgi.core,\
+	osgi.cmpn,\
+	org.apache.felix.gogo.runtime,\
+	junit.osgi,\
+	de.memory.api;version=latest,\
+	de.memory;version=latest,\
+	de.memory.gui.overview;version=latest
+
+-sub:  \
+	*.bnd

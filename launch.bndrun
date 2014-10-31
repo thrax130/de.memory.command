@@ -1,0 +1,31 @@
+-runfw: org.apache.felix.framework;version='[4,5)'
+-runee: JavaSE-1.7
+-runsystemcapabilities: ${native_capability}
+
+-resolve.effective: active;skip:="osgi.service"
+
+-runbundles:  \
+	de.memory;version=latest,\
+	de.memory.api;version=latest,\
+	de.memory.command.provider;version=latest,\
+	de.memory.gui;version=latest,\
+	de.memory.gui.overview;version=latest,\
+	de.memory.gui.player1;version=latest,\
+	de.memory.gui.player2;version=latest,\
+	org.apache.felix.configadmin;version='[1.8.0,1.8.1)',\
+	org.apache.felix.gogo.command;version='[0.12.0,0.12.1)',\
+	org.apache.felix.gogo.runtime;version='[0.10.0,0.10.1)',\
+	org.apache.felix.gogo.shell;version='[0.10.0,0.10.1)',\
+	org.apache.felix.scr;version='[1.6.2,1.6.3)',\
+	osgi.enterprise;version='[4.2.0,4.2.1)'
+
+-runrequires:  \
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
+	osgi.identity;filter:='(osgi.identity=de.memory.api)',\
+	osgi.identity;filter:='(osgi.identity=de.memory.command.provider)',\
+	osgi.identity;filter:='(osgi.identity=de.memory)',\
+	osgi.identity;filter:='(osgi.identity=de.memory.gui.overview)',\
+	osgi.identity;filter:='(osgi.identity=de.memory.gui.player1)',\
+	osgi.identity;filter:='(osgi.identity=de.memory.gui.player2)'
+-resolve: auto
